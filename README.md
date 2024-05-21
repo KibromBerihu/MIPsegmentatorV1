@@ -57,7 +57,7 @@ A typical data directory might look like:
 - Surrogate biomarkers (sTMTV and sDmax) will be automatically calculated and saved as an EXCEL file inside the folder output/*.csv. Two EXCEL files will be saved. The first one constitutes computed surrogate biomarkers calculated from the segmentation masks predicted from AI with an indicator `predicted` in the file name. The second EXCEL file would constitute the surrogate biomarkers computed from the reference segmentation masks (i.e., ground truth) from the expert (if available) with an indicator `ground_truth` in the file name. In addition to the `predicted` and `ground truth` indicator names, the CSV file's name also constitutes an automatically generated month, year, and the processing time.
 
 ## Citations 
-Please cite the following papers if you use this package for your research:
+Please consider citting the following papers if you use this package for your research:
 ```
    1. DOI: https://doi.org/10.2967/jnumed.121.263501 
 ```
