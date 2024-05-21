@@ -18,9 +18,9 @@ The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentatio
 ## Results  
 - Predicted results including predicted segmentation masks and calculated surrogate biomarekrs (sTMTV and sDmax) will be saved into the folder `output/.*`. 
 
- - # Predicted 2D MIP masks are saved under the folder name `output/predicted_data/final/*`. 
+ - Predicted 2D MIP masks are saved under the folder name `output/predicted_data/final/*`. 
    
- -  # Predicted 3D masks are saved under the folder name `output/predicted_data/predicted_pseudo_3d_reconstructed/*`.  
+ - Predicted 3D masks are saved under the folder name `output/predicted_data/predicted_pseudo_3d_reconstructed/*`.  
  
 - Surrogate biomarkers (sTMTV and sDmax) will be automatically calculated and saved as an EXCEL file inside the folder output/*.csv. Two EXCEL files will be saved. The first one constitutes computed surrogate biomarkers calculated from the segmentation masks predicted from AI with an indicator `predicted` in the file name. The second EXCEL file would constitute the surrogate biomarkers computed from the reference segmentation masks (i.e., ground truth) from the expert (if available) with an indicator `ground_truth` in the file name. In addition to the `predicted` and `ground truth` indicator names, the CSV file's name also constitutes an automatically generated month, year, and the processing time.
 - 
