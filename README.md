@@ -4,7 +4,7 @@
 
 ## *Artificial Intelligence for Efficient Learning-based Image Feature Extraction.*
 Tool for detecting and segmenting lesion in 3D PET images and automated quality control.  It was trained on lymphoma data including the autopet data. First, it autmatically 
-detects and segments lesions areas on the coronal and sagittal maixmum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruciton algorithm is then developed to get
+detects and segments lesions areas on the coronal and sagittal maximum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruciton algorithm is then developed to get
 the 3D lesions areas from the two 2D MIP segmentations thanks to the SUV value from the 3D PET images. 
 If you use it please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper.
 For the file structure and additional information please refer to the [github code](https://github.com/KibromBerihu/ai4elife).
