@@ -8,20 +8,6 @@ If you use it please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263
 For the file structure and additional information please refer to the [github code](https://github.com/KibromBerihu/ai4elife).
 The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentation on whole-body PET images including automated quality control.
 
-
-
-## Installation <a name="installation"> </a>
-MIPsegmentator works on Ubuntu, and Windows and on CPU and GPU. Not tested on mac. 
-Install depenencies:
-
-	-  Python >= 3.6
-
-	-  Keras >= 2.3.1
-
-	-  Tesnsorflow >=2.1.0
-
-
-
 ## usage
  <font size ="4"> Using docker image: building image from docker file [REPRODUCIBLE] </font> <br/><br>
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
