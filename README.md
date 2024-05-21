@@ -3,12 +3,10 @@
  [![Docker build passing](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://github.com/KibromBerihu/ai4elife/blob/main/Dockerfile) 
 
 ## *Artificial Intelligence for Efficient Learning-based Image Feature Extraction.*
-Tool for detecting and segmenting lesion in 3D PET images and automated quality control.  It was trained on lymphoma data including the autopet data. First, it autmatically 
-detects and segments lesions areas on the coronal and sagittal maximum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruciton algorithm is then developed to get
-the 3D lesions areas from the two 2D MIP segmentations thanks to the SUV value from the 3D PET images. 
-If you use this pipeline please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper.
-For the file structure and additional information please refer to the [github code](https://github.com/KibromBerihu/ai4elife).
-The input 3D PET image should be in SUV NIFTI format. A 3D lesion segmentation on whole-body PET images including automated quality control.
+Tool for detecting and segmenting lesions in 3D PET images with automated quality control. It was trained on lymphoma data, including the AutoPET data. First, it automatically detects and segments lesion areas on the coronal and sagittal maximum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruction algorithm is then developed to obtain the 3D lesion from the two 2D MIP segmentations using the SUV values from the 3D PET images.
+
+If you use this pipeline, please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper. For the file structure and additional information, please refer to the [github code](https://github.com/KibromBerihu/ai4elife). The input 3D PET image should be in SUV NIFTI format. This tool provides 3D lesion segmentation on whole-body PET images, including automated quality control.
+
 
 ## Required input folder structure
 Please provide all data in a single directory. The method automatically analyses all given data batch-wise. 
