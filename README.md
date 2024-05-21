@@ -15,7 +15,31 @@ The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentatio
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
    2) `Docker pull kibromberihu/mipsegmentator:latest-0`
    3) `docker run -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0 `
-      	 
+## Results
+
+- Two intermediate folders will be generated.
+
+  - The resized and cropped 3D PET, and corresponding ground truth  Nifti images are saved under the folder name:
+                  
+      ```../output/data_default_3d_dir```, and 
+  
+  - The generated corresponding sagittal and coronal images are saved in the folder name       
+``../output/data_default_mip_dir``.
+  
+  - For simplicity, the coronal PET MIP images are `pet_coronal.nii`, sagittal as `pet_sagittal.nii`, and corresponding ground truth as `ground_truth_coronal.nii`, and `ground_truth_sagittal.nii`, respectively.
+  
+  - NOTE: if there is no ground truth, it will only generate the coronal and sagittal PET MIPs. 
+  Kindly check if these generated files are in order.
+  
+  
+- Predicted results including predicted segmentation masks and calculated surrogate biomarekrs (sTMTV and sDmax) will be saved into the folder `output/.*`. 
+
+ - Predicted masks are saved under the folder name `output/predicted_data/final/*`. The predicted masks are indicated with the keyword `predicted` in the file name, and the input PET images are indicated with the keyword `pet`. For example, `patient_id_predicted.nii` for predicted mask of `patient_id` and `patient_id_pet.nii` for the PET images. If the ground truths are given, they are saved with the name `patient_id_ground_truth.nii`. Each .nii file has both sagittal and coronal views Each .nii file has both sagittal and coronal views concatenated.
+   
+ -  Predicted 3D masks are saved under the folder name `output/predicted_data/predicted_pseudo_3d_reconstructed/*`. The predicted masks are indicated with the keyword `predicted` in the file name, and the input PET images are indicated with the keyword `pet`. For example, `patient_id_predicted.nii` for predicted mask of `patient_id` and `patient_id_pet.nii` for the PET images. If the ground truths are given, they are saved with the name `patient_id_ground_truth.nii`. Each .nii file has both sagittal and coronal views Each .nii file has both sagittal and coronal views concatenated.  
+ 
+- Surrogate biomarkers (sTMTV and sDmax) will be automatically calculated and saved as an EXCEL file inside the folder output/*.csv. Two EXCEL files will be saved. The first one constitutes computed surrogate biomarkers calculated from the segmentation masks predicted from AI with an indicator `predicted` in the file name. The second EXCEL file would constitute the surrogate biomarkers computed from the reference segmentation masks (i.e., ground truth) from the expert (if available) with an indicator `ground_truth` in the file name. In addition to the `predicted` and `ground truth` indicator names, the CSV file's name also constitutes an automatically generated month, year, and the processing time.
+- 
 ## Citations 
 Please cite the following papers if you use this package for your research:
 ```
