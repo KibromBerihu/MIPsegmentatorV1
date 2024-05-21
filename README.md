@@ -26,12 +26,10 @@ Install depenencies:
  <font size ="4"> Using docker image: building image from docker file [REPRODUCIBLE] </font> <br/><br>
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/). 
       
-   2) Make sure to change the directory to the downloaded and unzipped MIPsegmentator directory. 
+   2) Docker pull kibromberihu/mipsegmentator:latest-0
       <br/><br>
-   3) Run the following commands to create a docker image with the name <DockerImageName>:<Tag>'
+   3) docker run -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0
    <br/><br>
-
-      `docker build -t <DockerImageName>:<Tag> .`
 
 ## Citations 
 Please cite the following papers if you use this package for your research:
