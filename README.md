@@ -42,7 +42,7 @@ A typical data directory might look like:
 
  **Note:** the folder name for PET images should be `pet` and for the ground truth `gt`. All other folder and sub-folder names could be anything.
 
-## usage
+## Usage
  <font size ="4"> For reproducibility purposes, the method is currently available only in a Docker image.</font> <br/><br>
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
    2) `Docker pull kibromberihu/mipsegmentator:latest-0`
