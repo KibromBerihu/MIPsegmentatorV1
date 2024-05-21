@@ -8,7 +8,39 @@ detects and segments lesions areas on the coronal and sagittal maximum intensity
 the 3D lesions areas from the two 2D MIP segmentations thanks to the SUV value from the 3D PET images. 
 If you use this pipeline please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper.
 For the file structure and additional information please refer to the [github code](https://github.com/KibromBerihu/ai4elife).
-The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentation on whole-body PET images including automated quality control.
+The input 3D PET image should be in SUV NIFTI format. A 3D lesion segmentation on whole-body PET images including automated quality control.
+
+## Required input folder structure
+Please provide all data in a single directory. The method automatically analyses all given data batch-wise. 
+
+To run the program, you only need PET scans (CT is not required) of patients in nifty format, where the PET images are coded in SUV units. If your images have already been segmented, you can also provide the mask (ground truth (gt)) as a binary image in nifty format. Suppose you provided ground truth (gt) data; it will print the dice, sensitivity, and specificity metrics between the reference segmentation by the expert (i.e., gt) and the predicted segmentation by the model. If the ground truth is NOT AVAILABLE, the model will only predict the segmentation. 
+
+A typical data directory might look like:
+
+
+    |-- main_folder                                             <-- The main folder or all patient folders (Give it any NAME)
+
+    |      |-- parent folder (patient_folder_1)             <-- Individual patient folder name with unique id
+    |           |-- pet                                     <-- The pet folder for the .nii suv file
+                     | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
+    |           |-- gt                                      <-- The corresponding ground truth folder for the .nii file  
+                     | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
+    |      |-- parent folder (patient_folder_2)             <-- Individual patient folder name with unique id
+    |          |-- gt                                     <-- The pet folder for the .nii suv file
+                    | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
+    |         |-- pet                                      <-- The corresponding ground truth folder for the .nii file  
+                    | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
+    |           .
+    |           .
+    |           .
+    |      |-- parent folder (patient_folder_N)             <-- Individual patient folder name with unique id
+    |           |-- pet                                     <-- The pet folder for the .nii suv file
+                    | -- name.nii or name.nii.gz            <-- The pet image in nifti format (Name can be anything)
+    |           |-- gt                                      <-- The corresponding ground truth folder for the .nii file  
+                    | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
+
+
+ **Note:** the folder name for PET images should be `pet` and for the ground truth `gt`. All other folder and sub-folder names could be anything.
 
 ## usage
  <font size ="4"> For reproducibility purposes, the method is currently available only in a Docker image.</font> <br/><br>
