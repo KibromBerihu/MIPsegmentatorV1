@@ -15,23 +15,7 @@ The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentatio
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
    2) `Docker pull kibromberihu/mipsegmentator:latest-0`
    3) `docker run -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0 `
-## Results
-
-- Two intermediate folders will be generated.
-
-  - The resized and cropped 3D PET, and corresponding ground truth  Nifti images are saved under the folder name:
-                  
-      ```../output/data_default_3d_dir```, and 
-  
-  - The generated corresponding sagittal and coronal images are saved in the folder name       
-``../output/data_default_mip_dir``.
-  
-  - For simplicity, the coronal PET MIP images are `pet_coronal.nii`, sagittal as `pet_sagittal.nii`, and corresponding ground truth as `ground_truth_coronal.nii`, and `ground_truth_sagittal.nii`, respectively.
-  
-  - NOTE: if there is no ground truth, it will only generate the coronal and sagittal PET MIPs. 
-  Kindly check if these generated files are in order.
-  
-  
+## Results  
 - Predicted results including predicted segmentation masks and calculated surrogate biomarekrs (sTMTV and sDmax) will be saved into the folder `output/.*`. 
 
  - # Predicted 2D MIP masks are saved under the folder name `output/predicted_data/final/*`. 
