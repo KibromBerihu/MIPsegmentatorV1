@@ -1,5 +1,4 @@
 # MIPsegmentatorV1
-A 3D lesion segmentation on whole-body PET images including automated quality control.
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
  [![Docker build passing](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://github.com/KibromBerihu/ai4elife/blob/main/Dockerfile) 
 
@@ -7,7 +6,7 @@ A 3D lesion segmentation on whole-body PET images including automated quality co
 Tool for detecting and segmenting lesion in 3D PET images and automated quality control.  It was trained on lymphoma data including the autopet data. 
 If you use it please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper.
 For the file structure and additional information please refer to the [github code](https://github.com/KibromBerihu/ai4elife).
-The input 3D PET image is should be in SUV NIFTI format. 
+The input 3D PET image is should be in SUV NIFTI format. A 3D lesion segmentation on whole-body PET images including automated quality control.
 
 
 
