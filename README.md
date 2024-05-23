@@ -3,11 +3,11 @@
  [![Docker build passing](https://img.shields.io/badge/docker%20build-passing-brightgreen)](https://github.com/KibromBerihu/ai4elife/blob/main/Dockerfile) 
 
 ## *Artificial Intelligence for Efficient Learning-based Image Feature Extraction.*
-Tool for detecting and segmenting lesions in 3D whole-body PET images with automated quality control. It was trained on lymphoma data, including the AutoPET data. First, it automatically detects and segments lesion areas on the coronal and sagittal maximum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruction algorithm is then developed to obtain the 3D lesion from the two 2D MIP segmentations using the SUV values from the 3D PET images.
+**Tool for detecting and segmenting lesions in 3D whole-body PET images with automated quality control.** It was trained on lymphoma data, including the AutoPET data. First, it automatically detects and segments lesion areas on the coronal and sagittal maximum intensity projections (MIP) PET images. A 3D lesion segmentation reconstruction algorithm is then developed to obtain the 3D lesion from the two 2D MIP segmentations using the SUV values from the 3D PET images.
 
 If you use this pipeline, please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper. For additional information regarding the AI-based lesion segmentations from the coronal and sagittal maximum intensity projections (MIP) PET images, please refer to the [github code](https://github.com/KibromBerihu/ai4elife). 
 
-**This tool provides robust 2D MIP and 3D lesion segmentation on whole-body PET images, including automated quality control. The input 3D PET image should be in SUV NIFTI format.**
+**This tool provides robust 2D MIP and 3D lesion segmentation on whole-body PET images, including automated quality control in Excel files. Surrogate biomarkers are automatically calculated and saved in an Excel file. The input 3D PET image should be in SUV NIFTI format.**
 
 <div align="center">
  <img src="https://github.com/KibromBerihu/MIPsegmentatorV1/blob/main/images/mipsegmentator.jpg" />
