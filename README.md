@@ -9,7 +9,9 @@ If you use this pipeline, please cite our [JNM paper](https://doi.org/10.2967/jn
 
 This tool provides 3D lesion segmentation on whole-body PET images, including automated quality control. The input 3D PET image should be in SUV NIFTI format. 
 
-![MIPsegmentator](https://github.com/KibromBerihu/MIPsegmentatorV1/blob/main/images/mipsegmentator.jpg)
+<div align="center">
+ <img src="https://github.com/KibromBerihu/MIPsegmentatorV1/blob/main/images/mipsegmentator.jpg" />
+</div>
 
 ## Required input folder structure
 Please provide all data in a single directory. The method automatically analyses all given data batch-wise. 
