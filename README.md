@@ -7,7 +7,7 @@ Tool for detecting and segmenting lesions in 3D whole-body PET images with autom
 
 If you use this pipeline, please cite our [JNM paper](https://doi.org/10.2967/jnumed.121.263501) and the [autopet data](https://doi.org/10.1038/s41597-022-01718-3) paper. For additional information regarding the AI-based lesion segmentations from the coronal and sagittal maximum intensity projections (MIP) PET images, please refer to the [github code](https://github.com/KibromBerihu/ai4elife). 
 
-This tool provides 2D MIP and 3D lesion segmentation on whole-body PET images, including automated quality control. The input 3D PET image should be in SUV NIFTI format. 
+* This tool provides 2D MIP and 3D lesion segmentation on whole-body PET images, including automated quality control. The input 3D PET image should be in SUV NIFTI format.* 
 
 <div align="center">
  <img src="https://github.com/KibromBerihu/MIPsegmentatorV1/blob/main/images/mipsegmentator.jpg" />
