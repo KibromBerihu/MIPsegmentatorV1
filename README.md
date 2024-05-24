@@ -21,7 +21,7 @@ To run the program, you only need PET scans (CT is not required) of patients in 
 A typical data directory might look like:
 
 
-    |-- main_folder (**input**)                                            <-- The main folder or all patient folders (Give it any NAME)
+    |-- input                                        <-- The main folder or all patient folders (Give it any NAME)
 
     |      |-- parent folder (patient_folder_1)             <-- Individual patient folder name with unique id
     |           |-- pet                                     <-- The pet folder for the .nii suv file
@@ -42,6 +42,8 @@ A typical data directory might look like:
     |           |-- gt                                      <-- The corresponding ground truth folder for the .nii file  
                     | -- name.nii or name.nii.gz            <-- The ground truth (gt) image in nifti format (Name can be anything)
 
+    | -- output 
+
 
  **Note:** the folder name for PET images should be `pet` and for the ground truth `gt`. All other folder and sub-folder names could be anything.
 
@@ -50,6 +52,11 @@ A typical data directory might look like:
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
    2) `Docker pull kibromberihu/mipsegmentator:latest-0`
    3) `docker run -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0 `
+      
+ 
+ **Note:** **/path/to/input_output/input/** folder includes the 3D PET in SUV  and gt (if available) in NIFTI format as detailed in the **required input folder structure** above.
+
+ 
 ## Results  
 - Predicted results including predicted segmentation masks and calculated surrogate biomarekrs (sTMTV and sDmax) will be saved into the folder `output/.*`. 
 
