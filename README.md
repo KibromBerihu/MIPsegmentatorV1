@@ -21,7 +21,7 @@ To run the program, you only need PET scans (CT is not required) of patients in 
 A typical data directory might look like:
 
 
-    |-- main_folder                                             <-- The main folder or all patient folders (Give it any NAME)
+    |-- main_folder (**input**)                                            <-- The main folder or all patient folders (Give it any NAME)
 
     |      |-- parent folder (patient_folder_1)             <-- Individual patient folder name with unique id
     |           |-- pet                                     <-- The pet folder for the .nii suv file
