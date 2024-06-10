@@ -54,8 +54,9 @@ A typical data directory might look like:
    3) `docker run --rm -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0 `
       
  
- **Note:** **/path/to/input_output/input/** folder includes the 3D PET in SUV  and gt (if available) in NIFTI format as detailed in the **required input folder structure** above.
-
+ **Note:** 
+ - **/path/to/input_output/input/**: This is the path to the folder that includes the 3D PET scans in SUV format and the ground truth (gt) files (if available) in NIFTI format, as detailed in the required input folder structure above.
+- **/path/to/input_output/output/**: This is the path to the folder where the output files will be saved.
  
 ## Results  
 - Predicted results including predicted segmentation masks and calculated surrogate biomarekrs (sTMTV and sDmax) will be saved into the folder `output/.*`. 
