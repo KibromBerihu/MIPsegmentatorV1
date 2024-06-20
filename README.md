@@ -51,7 +51,7 @@ A typical data directory might look like:
  <font size ="4"> For reproducibility purposes, the method is currently available only in a Docker image.</font> <br/><br>
    1) Assuming you already have [docker desktop](https://www.docker.com/) installed. For more information, kindly refer to [THIS](https://docs.docker.com/).
    2) `docker pull kibromberihu/mipsegmentator:latest-0`
-   3) `docker run --rm -v "/path/to/input_output/input/":"/home/docker_input" -v  "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0 `
+   3) docker run --gpus all --ipc=host --rm -v "/path/to/input_output/input/":"/home/docker_input" -v "/path/to/input_output/output/":"/home/docker_output" kibromberihu/mipsegmentator:latest-0
       
  
  **Note:** 
